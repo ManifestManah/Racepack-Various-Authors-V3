@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Spawn (START)
+		wcs_log -1 [Race]: Risen - [Block] Spawn (START)
 	}
 	es wcs_removeweapon event_var(userid) 1
 	es wcs_removeweapon event_var(userid) 2
@@ -36,7 +36,7 @@ block spawn
 	es est_effect 10 #a 0 sprites\lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 350 20 2.5 50 20 0 51 51 204 255 12
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Spawn (END)
+		wcs_log -1 [Race]: Risen - [Block] Spawn (END)
 	}
 }
 
@@ -44,7 +44,7 @@ block flesh
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 1 (START)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 1 (START)
 	}
 	es wcs_setfx health event_var(userid) + server_var(wcs_addhealth) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Your calloused flesh granted you server_var(wcs_addhealth) bonus health
@@ -57,7 +57,7 @@ block flesh
 	es_delayed .8 es est_effect 7 #a 0 sprites/smoke.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 100 10
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 1 (END)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 1 (END)
 	}
 }
 
@@ -65,7 +65,7 @@ block bite
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 2 (START)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 2 (START)
 	}
 	if (event_var(weapon) == knife) do
 	{
@@ -84,7 +84,7 @@ block bite
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 2 (END)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 2 (END)
 	}
 }
 
@@ -92,7 +92,7 @@ block hunger
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 3 (START)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 3 (START)
 	}
 	es wcs_setfx health event_var(attacker) + server_var(wcs_addhealth) 0
 	es_tell event_var(attacker) #multi #green [WCS]: #lightgreen You've gained server_var(wcs_addhealth) HP from feasting on event_var(es_username)!
@@ -101,7 +101,7 @@ block hunger
 	es est_effect 11 #a 0 sprites/blueflare1.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 2 3 150
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 3 (END)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 3 (END)
 	}
 }
 
@@ -109,7 +109,7 @@ block rise
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 4 (START)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 4 (START)
 	}
 	if (server_var(wcs_dice4) <= server_var(wcs_chance)) do
 	{
@@ -123,7 +123,7 @@ block rise
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 4 (END)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 4 (END)
 	}
 }
 
@@ -131,7 +131,7 @@ block dash
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 5 (START)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 5 (START)
 	}
 	es_getgame wcs_gamecheck
 	if ("Counter-Strike: Source" in server_var(wcs_gamecheck)) do
@@ -148,6 +148,6 @@ block dash
 	es est_effect 11 #a 0 sprites/halo.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 4 2 255
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Risen - [Block] Skill: 5 (END)
+		wcs_log -1 [Race]: Risen - [Block] Skill: 5 (END)
 	}
 }

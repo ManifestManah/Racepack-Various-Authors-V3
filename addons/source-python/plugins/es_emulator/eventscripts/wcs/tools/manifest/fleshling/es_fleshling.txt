@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Spawn (START)
+		wcs_log -1 [Race]: Fleshling - [Block] Spawn (START)
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
@@ -41,7 +41,7 @@ block spawn
 	es est_effect 10 #a 0 sprites/scanner.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 80 90 1.6 10 10 0 255 0 0 255 1
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Spawn (END)
+		wcs_log -1 [Race]: Fleshling - [Block] Spawn (END)
 	}
 }
 
@@ -49,13 +49,13 @@ block death
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Death (START)
+		wcs_log -1 [Race]: Fleshling - [Block] Death (START)
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Death (START)
+		wcs_log -1 [Race]: Fleshling - [Block] Death (START)
 	}
 }
 
@@ -63,13 +63,13 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] OnChange (START)
+		wcs_log -1 [Race]: Fleshling - [Block] OnChange (START)
 	}
 	es wcsgroup set evasion server_var(wcs_userid) 0
 	es wcsgroup set evasion_chance server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] OnChange (END)
+		wcs_log -1 [Race]: Fleshling - [Block] OnChange (END)
 	}
 }
 
@@ -77,7 +77,7 @@ block speed
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 1 (START)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= 50) do
 	{
@@ -113,7 +113,7 @@ block speed
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 1 (END)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 1 (END)
 	}
 }
 
@@ -122,7 +122,7 @@ block protection
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 2 (START)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -155,7 +155,7 @@ block protection
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 2 (END)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 2 (END)
 	}
 }
 
@@ -163,7 +163,7 @@ block disarm
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 3 (START)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -184,7 +184,7 @@ block disarm
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 3 (END)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 3 (END)
 	}
 }
 
@@ -192,7 +192,7 @@ block immortal
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 4 (START)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 4 (START)
 	}
 	es wcsgroup set evasion server_var(wcs_userid) 1
 	es wcsgroup set evasion_chance server_var(wcs_userid) 60
@@ -205,6 +205,6 @@ block immortal
 	es est_effect 4 #a 0 sprites/lgtning.vmt server_var(wcs_userid) 1 10 10 10 255 0 25 255
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Fleshling - [Block] Skill: 4 (END)
+		wcs_log -1 [Race]: Fleshling - [Block] Skill: 4 (END)
 	}
 }

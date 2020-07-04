@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Spawn (START)
+		wcs_log -1 [Race]: Lich - [Block] Spawn (START)
 	}
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(userid)
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 20 50 2 60 100 0.8 0 20 100 255 1
@@ -15,7 +15,7 @@ block spawn
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 40 60 2 20 10 1 10 255 0 255 1
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Spawn (END)
+		wcs_log -1 [Race]: Lich - [Block] Spawn (END)
 	}
 }
 
@@ -23,13 +23,13 @@ block gravity
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 1 (START)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 1 (START)
 	}
 	es_delayed .2 wcs_setfx gravity event_var(userid) = server_var(wcs_gravity) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Levitation - Has reduced your gravity
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 1 (END)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 1 (END)
 	}
 }
 
@@ -37,7 +37,7 @@ block frost
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 2 (START)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -65,7 +65,7 @@ block frost
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 2 (END)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 2 (END)
 	}
 }
 
@@ -73,7 +73,7 @@ block dod
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 3 (START)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -88,7 +88,7 @@ block dod
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 3 (END)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 3 (END)
 	}
 }
 
@@ -96,7 +96,7 @@ block ritual
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 4 (START)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 4 (START)
 	}
 	es playerget cash wcs_money server_var(wcs_userid)
 	if (server_var(wcs_money) >= 125) do
@@ -111,6 +111,6 @@ block ritual
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Lich - [Block] Skill: 4 (END)
+		wcs_log -1 [Race]: Lich - [Block] Skill: 4 (END)
 	}
 }

@@ -7,7 +7,7 @@ block freeze
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 1 (START)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 	{
@@ -38,7 +38,7 @@ block freeze
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 1 (END)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 1 (END)
 	}
 }
 
@@ -46,13 +46,13 @@ block longjump
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 2 (START)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 2 (START)
 	}
 	es wcs_setfx longjump event_var(userid) + server_var(wcs_multiplier) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Longjump - You have increased jump length
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 2 (END)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 2 (END)
 	}
 }
 
@@ -60,7 +60,7 @@ block health
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 3 (START)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 3 (START)
 	}
 	es wcs_setfx health event_var(userid) + server_var(wcs_addhealth) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Health - You received more health!
@@ -69,7 +69,7 @@ block health
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 50 400 2.5 100 100 0 255 128 128 255 25
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 3 (END)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 3 (END)
 	}
 }
 
@@ -77,7 +77,7 @@ block teleport
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 4 (START)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 4 (START)
 	}
 	es_xset wcs_range 1250
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 server_var(wcs_userid)
@@ -199,6 +199,6 @@ block teleport
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Roy Miller - [Block] Skill: 4 (END)
+		wcs_log -1 [Race]: Roy Miller - [Block] Skill: 4 (END)
 	}
 }

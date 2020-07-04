@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Spawn (START)
+		wcs_log -1 [Race]: Diglett - [Block] Spawn (START)
 	}
 	es wcsgroup get diglett wcs_tmp3 event_var(userid)
 	if (server_var(wcs_tmp3) == 1) do
@@ -22,7 +22,7 @@ block spawn
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Spawn (END)
+		wcs_log -1 [Race]: Diglett - [Block] Spawn (END)
 	}
 }
 
@@ -30,12 +30,12 @@ block death
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Death (START)
+		wcs_log -1 [Race]: Diglett - [Block] Death (START)
 	}
 	es wcsgroup set burrowed event_var(userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Death (END)
+		wcs_log -1 [Race]: Diglett - [Block] Death (END)
 	}
 }
 
@@ -43,12 +43,12 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] OnChange (START)
+		wcs_log -1 [Race]: Diglett - [Block] OnChange (START)
 	}
 	es wcsgroup set burrowed server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] OnChange (END)
+		wcs_log -1 [Race]: Diglett - [Block] OnChange (END)
 	}
 }
 
@@ -56,7 +56,7 @@ block rock
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 1 (START)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 	{
@@ -78,7 +78,7 @@ block rock
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 1 (END)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 1 (END)
 	}
 }
 
@@ -86,7 +86,7 @@ block sand
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 2 (START)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -103,7 +103,7 @@ block sand
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 2 (END)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 2 (END)
 	}
 }
 
@@ -111,7 +111,7 @@ block earthquake
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 3 (START)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -134,7 +134,7 @@ block earthquake
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 3 (END)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 3 (END)
 	}
 }
 
@@ -142,7 +142,7 @@ block dig
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 4 (START)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 4 (START)
 	}
 	es wcsgroup set diglett server_var(wcs_userid) 1
 	es_getplayerlocation wcs_x12 wcs_y12 wcs_z12 server_var(wcs_userid)
@@ -166,6 +166,6 @@ block dig
 	es_delayed server_var(wcs_duration) es_tell server_var(wcs_userid) #multi #green [WCS]: #lightgreen Dig - You went above ground!
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Diglett - [Block] Skill: 4 (END)
+		wcs_log -1 [Race]: Diglett - [Block] Skill: 4 (END)
 	}
 }
