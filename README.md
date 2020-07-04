@@ -51,7 +51,6 @@ All of the 25 races are remastered/reworked versions of various authors' races. 
 
 
 ## Future development plans
-- [ ] Change the method of the logging to be put in source-python's logs.
 - [ ] Fix any bugs/issues that gets reported.
 
 
