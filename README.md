@@ -2,6 +2,13 @@
 This is an easy-to-install race package for Tha Pwned's version of the Warcraft-Source modification which can be found and downloaded [here](https://github.com/ThaPwned/WCS).
 
 
+## Requirements
+For this package to work, it is required that you first install the following:
+- [EventScripts-Emulator](https://github.com/Ayuto/EventScripts-Emulator)
+- [Warcraft-Source](https://github.com/ThaPwned/WCS)
+- [Warcraft-Source: Essentials](https://github.com/ManifestManah/Warcraft-Source-Essentials)
+
+
 ## What does this package do? - And what does it contain?
 Installing this package on to your server will add 25 new races to your Warcraft-Source server.
 All of the 25 races are remastered/reworked versions of various authors' races. This package features content by the following authors; Blood Rush, CloudStrife, Dallimba, $Diablo$, Espeladden, G]olden [E]yes, Gringo, Hazzal, Impact, KicK!, Lolinger, Mark, Megalomaniac, Omega, Polis, Psycho, Pushock, Raven Chancellor, Sirr John, TweakIce, Unkn0wn and Yttriot.
