@@ -7,7 +7,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 1 (START)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= 15) do
 	{
@@ -34,7 +34,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 1 (END)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 1 (END)
 	}
 }
 
@@ -42,14 +42,14 @@ block invisibility
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 2 (START)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 2 (START)
 	}
 	es_delayed .5 wcs_color event_var(userid) 255 255 255 server_var(wcs_invis) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Invisibility - You've become less visible
 	es_playsound event_var(userid) wcs/invisibility.wav .8
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 2 (END)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 2 (END)
 	}
 }
 
@@ -57,7 +57,7 @@ block regeneration
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 3 (START)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 3 (START)
 	}
 	if (event_var(es_userdead) = 0) do
 	{
@@ -67,7 +67,7 @@ block regeneration
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 3 (END)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 3 (END)
 	}
 }
 
@@ -75,7 +75,7 @@ block teleport
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 4 (START)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 4 (START)
 	}
 	es_xset wcs_range 1250
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 server_var(wcs_userid)
@@ -197,6 +197,6 @@ block teleport
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Hirako Shinji - [Block] Skill: 4 (END)
+		wcs_log [Race]: Hirako Shinji - [Block] Skill: 4 (END)
 	}
 }

@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Spawn (START)
+		wcs_log [Race]: Plutonium - [Block] Spawn (START)
 	}
 	es wcsgroup set ability_count event_var(userid) 3
 	es_delayed .5 wcs_color event_var(userid) 105 105 105 255 0
@@ -36,7 +36,7 @@ block spawn
 	es est_effect 11 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 3 2 255
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Spawn (END)
+		wcs_log [Race]: Plutonium - [Block] Spawn (END)
 	}
 }
 
@@ -44,12 +44,12 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] OnChange (START)
+		wcs_log [Race]: Plutonium - [Block] OnChange (START)
 	}
 	es wcsgroup set ability_count server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] OnChange (END)
+		wcs_log [Race]: Plutonium - [Block] OnChange (END)
 	}
 }
 
@@ -57,7 +57,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 1 (START)
+		wcs_log [Race]: Plutonium - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 	{
@@ -78,7 +78,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 1 (END)
+		wcs_log [Race]: Plutonium - [Block] Skill: 1 (END)
 	}
 }
 
@@ -86,13 +86,13 @@ block health
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 2 (START)
+		wcs_log [Race]: Plutonium - [Block] Skill: 2 (START)
 	}
 	es wcs_setfx health event_var(userid) + server_var(wcs_addhealth)
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Thick metal skin - Gave you server_var(wcs_addhealth) more health
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 2 (END)
+		wcs_log [Race]: Plutonium - [Block] Skill: 2 (END)
 	}
 }
 
@@ -100,14 +100,14 @@ block buff
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 3 (START)
+		wcs_log [Race]: Plutonium - [Block] Skill: 3 (START)
 	}
 	es_getplayerteam wcs_team event_var(userid)
 	if (server_var(wcs_team) = 2) then wcs_foreach player wcs_player #t "es wcs_setfx health server_var(wcs_player) + server_var(wcs_addhealth);es_tell event_var(userid) #multi #green [WCS]: #lightgreen Sharing the secret - Recieved + server_var(wcs_addhealth) health" 
 	if (server_var(wcs_team) = 3) then wcs_foreach player wcs_player #ct "es wcs_setfx health server_var(wcs_player) + server_var(wcs_addhealth);es_tell event_var(userid) #multi #green [WCS]: #lightgreen Sharing the secret - Recieved + server_var(wcs_addhealth) health"
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 3 (END)
+		wcs_log [Race]: Plutonium - [Block] Skill: 3 (END)
 	}
 }
 
@@ -115,7 +115,7 @@ block ward
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 4 (START)
+		wcs_log [Race]: Plutonium - [Block] Skill: 4 (START)
 	}
 	es wcsgroup get ability_count wcs_count server_var(wcs_userid)
 	if (server_var(wcs_count) => 1) do
@@ -139,6 +139,6 @@ block ward
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Plutonium - [Block] Skill: 4 (END)
+		wcs_log [Race]: Plutonium - [Block] Skill: 4 (END)
 	}
 }

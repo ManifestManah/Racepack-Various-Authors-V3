@@ -7,7 +7,7 @@ block speed_longjump_gravity
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 1 (START)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 1 (START)
 	}
 	es wcs_setfx speed event_var(userid) = server_var(wcs_speed) 0
 	es wcs_setfx longjump event_var(userid) + .5 0
@@ -15,7 +15,7 @@ block speed_longjump_gravity
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Super Powers - Made you way more mobile
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 1 (END)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 1 (END)
 	}
 }
 
@@ -23,7 +23,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 2 (START)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -60,7 +60,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 2 (END)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 2 (END)
 	}
 }
 
@@ -68,7 +68,7 @@ block freeze
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 3 (START)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -99,7 +99,7 @@ block freeze
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 3 (END)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 3 (END)
 	}
 }
 
@@ -107,7 +107,7 @@ block teleport
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 4 (START)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 4 (START)
 	}
 	es_xset wcs_range 1500
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 server_var(wcs_userid)
@@ -229,6 +229,6 @@ block teleport
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Rainbow Man - [Block] Skill: 4 (END)
+		wcs_log [Race]: Rainbow Man - [Block] Skill: 4 (END)
 	}
 }

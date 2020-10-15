@@ -7,13 +7,13 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Spawn (START)
+		wcs_log [Race]: King Of Air - [Block] Spawn (START)
 	}
 	es wcs_setfx jetpack event_var(userid) = 0 0
 	es wcsgroup set kingofair_fly event_var(userid) 1
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Spawn (END)
+		wcs_log [Race]: King Of Air - [Block] Spawn (END)
 	}
 }
 
@@ -21,7 +21,7 @@ block freeze
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 1 (START)
+		wcs_log [Race]: King Of Air - [Block] Skill: 1 (START)
 	}
 	if (event_var(es_userdead) = 0) do
 	{
@@ -49,7 +49,7 @@ block freeze
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 1 (END)
+		wcs_log [Race]: King Of Air - [Block] Skill: 1 (END)
 	}
 }
 
@@ -57,7 +57,7 @@ block burn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 2 (START)
+		wcs_log [Race]: King Of Air - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -89,7 +89,7 @@ block burn
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 2 (END)
+		wcs_log [Race]: King Of Air - [Block] Skill: 2 (END)
 	}
 }
 
@@ -97,7 +97,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 3 (START)
+		wcs_log [Race]: King Of Air - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= 10) do
 	{
@@ -124,7 +124,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 3 (END)
+		wcs_log [Race]: King Of Air - [Block] Skill: 3 (END)
 	}
 }
 
@@ -132,7 +132,7 @@ block fly
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 4 (START)
+		wcs_log [Race]: King Of Air - [Block] Skill: 4 (START)
 	}
 	es_isbot wcs_tmp1 server_var(wcs_userid)
 	if (server_var(wcs_tmp1) = 0) do
@@ -173,6 +173,6 @@ block fly
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: King Of Air - [Block] Skill: 4 (END)
+		wcs_log [Race]: King Of Air - [Block] Skill: 4 (END)
 	}
 }

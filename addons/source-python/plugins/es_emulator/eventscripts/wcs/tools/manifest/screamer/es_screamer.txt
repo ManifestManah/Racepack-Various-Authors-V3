@@ -7,13 +7,13 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Spawn (START)
+		wcs_log [Race]: Screamer - [Block] Spawn (START)
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Spawn (END)
+		wcs_log [Race]: Screamer - [Block] Spawn (END)
 	}
 }
 
@@ -21,13 +21,13 @@ block death
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Death (START)
+		wcs_log [Race]: Screamer - [Block] Death (START)
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Death (START)
+		wcs_log [Race]: Screamer - [Block] Death (START)
 	}
 }
 
@@ -35,13 +35,13 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] OnChange (START)
+		wcs_log [Race]: Screamer - [Block] OnChange (START)
 	}
 	es wcsgroup set evasion server_var(wcs_userid) 0
 	es wcsgroup set evasion_chance server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] OnChange (END)
+		wcs_log [Race]: Screamer - [Block] OnChange (END)
 	}
 }
 
@@ -49,7 +49,7 @@ block disarm
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 1 (START)
+		wcs_log [Race]: Screamer - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 	{
@@ -86,7 +86,7 @@ block disarm
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 1 (END)
+		wcs_log [Race]: Screamer - [Block] Skill: 1 (END)
 	}
 }
 
@@ -94,7 +94,7 @@ block armour_reduction
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 2 (START)
+		wcs_log [Race]: Screamer - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -110,7 +110,7 @@ block armour_reduction
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 2 (END)
+		wcs_log [Race]: Screamer - [Block] Skill: 2 (END)
 	}
 }
 
@@ -118,7 +118,7 @@ block freeze
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 3 (START)
+		wcs_log [Race]: Screamer - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -144,7 +144,7 @@ block freeze
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 3 (END)
+		wcs_log [Race]: Screamer - [Block] Skill: 3 (END)
 	}
 }
 
@@ -152,7 +152,7 @@ block immortality
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 4 (START)
+		wcs_log [Race]: Screamer - [Block] Skill: 4 (START)
 	}
 	es_getgame wcs_gamecheck
 	if ("Counter-Strike: Source" in server_var(wcs_gamecheck)) do
@@ -179,6 +179,6 @@ block immortality
 	es est_effect 4 #a 0 sprites/strider_bluebeam.vmt server_var(wcs_userid) 2 10 1 1 255 255 255 180
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Screamer - [Block] Skill: 4 (END)
+		wcs_log [Race]: Screamer - [Block] Skill: 4 (END)
 	}
 }

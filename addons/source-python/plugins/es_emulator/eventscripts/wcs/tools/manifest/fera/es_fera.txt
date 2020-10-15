@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Spawn (START)
+		wcs_log [Race]: Fera - [Block] Spawn (START)
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
@@ -28,7 +28,7 @@ block spawn
 	es_delayed .1 es_give event_var(userid) weapon_knife
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Spawn (END)
+		wcs_log [Race]: Fera - [Block] Spawn (END)
 	}
 }
 
@@ -36,13 +36,13 @@ block death
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Death (START)
+		wcs_log [Race]: Fera - [Block] Death (START)
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Death (START)
+		wcs_log [Race]: Fera - [Block] Death (START)
 	}
 }
 
@@ -50,13 +50,13 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] OnChange (START)
+		wcs_log [Race]: Fera - [Block] OnChange (START)
 	}
 	es wcsgroup set evasion server_var(wcs_userid) 0
 	es wcsgroup set evasion_chance server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] OnChange (END)
+		wcs_log [Race]: Fera - [Block] OnChange (END)
 	}
 }
 
@@ -64,7 +64,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 1 (START)
+		wcs_log [Race]: Fera - [Block] Skill: 1 (START)
 	}
 	if (event_var(weapon) = knife) do
 	{
@@ -89,7 +89,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 1 (END)
+		wcs_log [Race]: Fera - [Block] Skill: 1 (END)
 	}
 }
 
@@ -97,7 +97,7 @@ block blind
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 2 (START)
+		wcs_log [Race]: Fera - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -122,7 +122,7 @@ block blind
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 2 (END)
+		wcs_log [Race]: Fera - [Block] Skill: 2 (END)
 	}
 }
 
@@ -130,7 +130,7 @@ block drug
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 3 (START)
+		wcs_log [Race]: Fera - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -152,7 +152,7 @@ block drug
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 3 (END)
+		wcs_log [Race]: Fera - [Block] Skill: 3 (END)
 	}
 }
 
@@ -160,7 +160,7 @@ block immortal
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 4 (START)
+		wcs_log [Race]: Fera - [Block] Skill: 4 (START)
 	}
 	ex_rand wcs_chance 50 70
 	es wcsgroup set evasion server_var(wcs_userid) 1
@@ -175,6 +175,6 @@ block immortal
 	es_delayed server_var(wcs_duration) es_tell server_var(wcs_userid) #multi #green [WCS]: #lightgreen Titanium carapace - Your evasion is fading.
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Fera - [Block] Skill: 4 (END)
+		wcs_log [Race]: Fera - [Block] Skill: 4 (END)
 	}
 }

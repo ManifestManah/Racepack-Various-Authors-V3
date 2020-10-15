@@ -7,7 +7,7 @@ block drug_angle
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 1 (START)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 	{
@@ -46,7 +46,7 @@ block drug_angle
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 1 (END)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 1 (END)
 	}
 }
 
@@ -54,7 +54,7 @@ block speed
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 2 (START)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 2 (START)
 	}
 	es wcs_setfx speed event_var(userid) = server_var(wcs_speed) 0
 	es_xmath wcs_speed * 100
@@ -63,7 +63,7 @@ block speed
 	es_delayed .8 es_playsound event_var(userid) wcs/speed.wav .8
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 2 (END)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 2 (END)
 	}
 }
 
@@ -71,7 +71,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 3 (START)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{ 
@@ -90,7 +90,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 3 (END)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 3 (END)
 	}
 }
 
@@ -98,7 +98,7 @@ block health_increase
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 4 (START)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 4 (START)
 	}
 	es playerget health wcs_tmp2 server_var(wcs_userid)
 	if (server_var(wcs_tmp2) < 200) do
@@ -122,6 +122,6 @@ block health_increase
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Undead Drug Lord - [Block] Skill: 4 (END)
+		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 4 (END)
 	}
 }

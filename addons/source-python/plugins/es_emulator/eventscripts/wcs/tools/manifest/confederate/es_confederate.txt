@@ -7,7 +7,7 @@ block invisibility
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 1 (START)
+		wcs_log [Race]: Confederate - [Block] Skill: 1 (START)
 	}
 	if (event_var(es_userdead) = 0) do
 	{
@@ -22,7 +22,7 @@ block invisibility
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 1 (END)
+		wcs_log [Race]: Confederate - [Block] Skill: 1 (END)
 	}
 }
 
@@ -30,7 +30,7 @@ block health
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 2 (START)
+		wcs_log [Race]: Confederate - [Block] Skill: 2 (START)
 	}
 	if (event_var(es_userdead) = 0) do
 	{
@@ -44,7 +44,7 @@ block health
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 2 (END)
+		wcs_log [Race]: Confederate - [Block] Skill: 2 (END)
 	}
 }
 
@@ -52,7 +52,7 @@ block mirror_damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 3 (START)
+		wcs_log [Race]: Confederate - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -84,7 +84,7 @@ block mirror_damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 3 (END)
+		wcs_log [Race]: Confederate - [Block] Skill: 3 (END)
 	}
 }
 
@@ -92,7 +92,7 @@ block teleport
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 4 (START)
+		wcs_log [Race]: Confederate - [Block] Skill: 4 (START)
 	}
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 server_var(wcs_userid)
 	es_xmath wcs_z1 + 25
@@ -214,6 +214,6 @@ block teleport
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Confederate - [Block] Skill: 4 (END)
+		wcs_log [Race]: Confederate - [Block] Skill: 4 (END)
 	}
 }

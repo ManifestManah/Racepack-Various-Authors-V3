@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Spawn (START)
+		wcs_log [Race]: Kirby - [Block] Spawn (START)
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
@@ -41,7 +41,7 @@ block spawn
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 10 5 4 10 0 5 0 5 255 255 1
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Spawn (END)
+		wcs_log [Race]: Kirby - [Block] Spawn (END)
 	}
 }
 
@@ -49,13 +49,13 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] OnChange (START)
+		wcs_log [Race]: Kirby - [Block] OnChange (START)
 	}
 	es wcsgroup set evasion server_var(wcs_userid) 0
 	es wcsgroup set evasion_chance server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] OnChange (END)
+		wcs_log [Race]: Kirby - [Block] OnChange (END)
 	}
 }
 
@@ -63,7 +63,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 1 (START)
+		wcs_log [Race]: Kirby - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= 15) do
 	{
@@ -86,7 +86,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 1 (END)
+		wcs_log [Race]: Kirby - [Block] Skill: 1 (END)
 	}
 }
 
@@ -94,7 +94,7 @@ block freeze
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 2 (START)
+		wcs_log [Race]: Kirby - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{	
@@ -125,7 +125,7 @@ block freeze
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 2 (END)
+		wcs_log [Race]: Kirby - [Block] Skill: 2 (END)
 	}
 }
 
@@ -133,14 +133,14 @@ block evade
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 3 (START)
+		wcs_log [Race]: Kirby - [Block] Skill: 3 (START)
 	}
 	es wcsgroup set evasion event_var(userid) 1
 	es wcsgroup set evasion_chance event_var(userid) server_var(wcs_chance)
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Evasion - Gives you server_var(wcs_chance)% chance to dodge incoming attacks
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 3 (END)
+		wcs_log [Race]: Kirby - [Block] Skill: 3 (END)
 	}
 }
 
@@ -148,7 +148,7 @@ block health
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 4 (START)
+		wcs_log [Race]: Kirby - [Block] Skill: 4 (START)
 	}
 	es wcs_setfx health event_var(userid) + server_var(wcs_addhealth) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Health - You received more health!
@@ -157,6 +157,6 @@ block health
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 50 400 2.5 100 100 0 255 128 128 255 25
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Kirby - [Block] Skill: 4 (END)
+		wcs_log [Race]: Kirby - [Block] Skill: 4 (END)
 	}
 }
