@@ -84,7 +84,7 @@ block stomp
 	{
 		es_xset wcs_targetteam "#alive"
 		es_getlivingplayercount wcs_pcount
-		es_set server_var(wcs_userid) server_var(wcs_ffa_userid)
+		es_set wcs_ffa_userid server_var(wcs_userid)
 	}
 	ifx false(wcs_ffa_enabled) do
 	{
