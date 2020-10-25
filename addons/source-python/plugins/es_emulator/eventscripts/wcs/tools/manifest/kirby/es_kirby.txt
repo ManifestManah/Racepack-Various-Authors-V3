@@ -11,9 +11,16 @@ block spawn
 	}
 	es wcsgroup set evasion event_var(userid) 0
 	es wcsgroup set evasion_chance event_var(userid) 0
-	es_getplayerteam wcs_team event_var(userid)
-	if (server_var(wcs_team) = 3) then es_delayed .5 es playerset color event_var(userid) 30 144 255 255
-	if (server_var(wcs_team) = 2) then es_delayed .5 es playerset color event_var(userid) 255 0 0 255
+	ifx true(wcs_ffa_enabled) do
+	{
+		es playerset color event_var(userid) 255 0 0 255
+	}
+	ifx false(wcs_ffa_enabled) do
+	{
+		es_getplayerteam wcs_team event_var(userid)
+		if (server_var(wcs_team) = 3) then es_delayed .5 es playerset color event_var(userid) 30 144 255 255
+		if (server_var(wcs_team) = 2) then es_delayed .5 es playerset color event_var(userid) 255 0 0 255
+	}
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(userid)
 	es_xmath wcs_z1 + 15
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 100 95 4 10 0 5 0 5 255 255 1

@@ -102,9 +102,17 @@ block buff
 	{
 		wcs_log [Race]: Plutonium - [Block] Skill: 3 (START)
 	}
-	es_getplayerteam wcs_team event_var(userid)
-	if (server_var(wcs_team) = 2) then wcs_foreach player wcs_player #t "es wcs_setfx health server_var(wcs_player) + server_var(wcs_addhealth);es_tell event_var(userid) #multi #green [WCS]: #lightgreen Sharing the secret - Recieved + server_var(wcs_addhealth) health" 
-	if (server_var(wcs_team) = 3) then wcs_foreach player wcs_player #ct "es wcs_setfx health server_var(wcs_player) + server_var(wcs_addhealth);es_tell event_var(userid) #multi #green [WCS]: #lightgreen Sharing the secret - Recieved + server_var(wcs_addhealth) health"
+	ifx true(wcs_ffa_enabled) do
+	{
+		es wcs_setfx health server_var(wcs_player) + server_var(wcs_addhealth)
+		es_tell event_var(userid) #multi #green [WCS]: #lightgreen Sharing the secret - You recieved server_var(wcs_addhealth) health
+	}
+	ifx false(wcs_ffa_enabled) do
+	{
+		es_getplayerteam wcs_team event_var(userid)
+		if (server_var(wcs_team) = 2) then wcs_foreach player wcs_player #t "es wcs_setfx health server_var(wcs_player) + server_var(wcs_addhealth);es_tell event_var(userid) #multi #green [WCS]: #lightgreen Sharing the secret - Recieved + server_var(wcs_addhealth) health" 
+		if (server_var(wcs_team) = 3) then wcs_foreach player wcs_player #ct "es wcs_setfx health server_var(wcs_player) + server_var(wcs_addhealth);es_tell event_var(userid) #multi #green [WCS]: #lightgreen Sharing the secret - Recieved + server_var(wcs_addhealth) health"
+	}
 	ifx true(wcs_race_debugging) do
 	{
 		wcs_log [Race]: Plutonium - [Block] Skill: 3 (END)
