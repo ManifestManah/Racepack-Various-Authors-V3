@@ -1,6 +1,6 @@
 ////////////////////////////////
 //Various Authors V3 Race Pack//
-//Version 1.0.0B              //
+//Version 1.0.1B              //
 ////////////////////////////////
 
 block drug_angle
@@ -60,7 +60,7 @@ block speed
 	es_xmath wcs_speed * 100
 	es_xmath wcs_speed - 100
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Cocaine - You've snorted cocaine and can run faster
-	es_delayed .8 es_playsound event_var(userid) wcs/speed.wav .8
+	es_delayed .8 es_playsound event_var(userid) wcs/speed.mp3 .8
 	ifx true(wcs_race_debugging) do
 	{
 		wcs_log [Race]: Undead Drug Lord - [Block] Skill: 2 (END)
@@ -105,7 +105,7 @@ block health_increase
 	{
 		es_xrand wcs_addhealth 15 30
 		es wcs_setfx health server_var(wcs_userid) + server_var(wcs_addhealth) 0
-		es_playsound server_var(wcs_userid) wcs/heal.wav 1
+		es_playsound server_var(wcs_userid) wcs/heal.mp3 1
 		es_tell server_var(wcs_userid) #multi #green [WCS]: #lightgreen Bong Rip - Gave you server_var(wcs_addhealth) health
 		es_getplayerlocation wcs_x2 wcs_y2 wcs_z2 server_var(wcs_userid)
 		es_xmath wcs_z2 + 30
@@ -114,7 +114,7 @@ block health_increase
 	if (server_var(wcs_tmp2) => 200) do
 	{
 		es wcs_setfx health server_var(wcs_userid) = 200 0
-		es_playsound server_var(wcs_userid) wcs/heal.wav 1
+		es_playsound server_var(wcs_userid) wcs/heal.mp3 1
 		es_tell server_var(wcs_userid) #multi #green [WCS]: #lightgreen Bong Rip - You took a bong rip and reached the 200 health cap!
 		es_getplayerlocation wcs_x2 wcs_y2 wcs_z2 server_var(wcs_userid)
 		es_xmath wcs_z2 + 30

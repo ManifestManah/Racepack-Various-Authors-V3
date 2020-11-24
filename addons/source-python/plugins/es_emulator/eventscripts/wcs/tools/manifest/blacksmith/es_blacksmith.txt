@@ -1,6 +1,6 @@
 ////////////////////////////////
 //Various Authors V3 Race Pack//
-//Version 1.0.0B              //
+//Version 1.0.1B              //
 ////////////////////////////////
 
 block spawn
@@ -138,8 +138,8 @@ block life_leech
 		{
 			if (event_var(es_attackerdead) = 0) do
 			{
-				es_playsound event_var(attacker) wcs/vampiricstrike.wav .7
-				es_playsound event_var(userid) wcs/vampiricstrike.wav .8
+				es_playsound event_var(attacker) wcs/vampiricstrike.mp3 .7
+				es_playsound event_var(userid) wcs/vampiricstrike.mp3 .8
 				es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(userid)
 				es_getplayerlocation wcs_x2 wcs_y2 wcs_z2 event_var(attacker)
 				es_xmath wcs_z1 + 20

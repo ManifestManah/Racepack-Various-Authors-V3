@@ -1,6 +1,6 @@
 ////////////////////////////////
 //Various Authors V3 Race Pack//
-//Version 1.0.0B              //
+//Version 1.0.1B              //
 ////////////////////////////////
 
 block damage
@@ -17,7 +17,7 @@ block damage
 			{
 				es damage event_var(userid) server_var(wcs_dmg) 1 event_var(attacker)
 				es wcs_centertell event_var(attacker) Critical strike did + server_var(wcs_dmg) damage!
-				es_playsound event_var(attacker) wcs/zeal.wav .6
+				es_playsound event_var(attacker) wcs/zeal.mp3 .6
 				es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(attacker)
 				es_getplayerlocation wcs_x2 wcs_y2 wcs_z2 event_var(userid)
 				es_xmath wcs_z1 + 20
@@ -46,7 +46,7 @@ block invisibility
 	}
 	es_delayed .5 wcs_color event_var(userid) 255 255 255 server_var(wcs_invis) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Invisibility - You've become less visible
-	es_playsound event_var(userid) wcs/invisibility.wav .8
+	es_playsound event_var(userid) wcs/invisibility.mp3 .8
 	ifx true(wcs_race_debugging) do
 	{
 		wcs_log [Race]: Hirako Shinji - [Block] Skill: 2 (END)

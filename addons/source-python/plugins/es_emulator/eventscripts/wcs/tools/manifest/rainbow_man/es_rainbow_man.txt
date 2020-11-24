@@ -1,6 +1,6 @@
 ////////////////////////////////
 //Various Authors V3 Race Pack//
-//Version 1.0.0B              //
+//Version 1.0.1B              //
 ////////////////////////////////
 
 block speed_longjump_gravity
@@ -84,8 +84,8 @@ block freeze
 					es wcs_setfx freeze event_var(userid) = 1 1
 					es wcs_centertell event_var(attacker) You froze event_var(es_username) for 1 second!
 					es wcs_centertell event_var(userid) for event_var(es_attackername) Froze you for 1 second!
-					es_playsound event_var(attacker) skills/frostbolt.wav .8
-					es_playsound event_var(userid) skills/frostbolt.wav 1
+					es_playsound event_var(attacker) skills/frostbolt.mp3 .8
+					es_playsound event_var(userid) skills/frostbolt.mp3 1
 					es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(attacker)
 					es_getplayerlocation wcs_x2 wcs_y2 wcs_z2 event_var(userid)
 					es_xmath wcs_z1 + 20

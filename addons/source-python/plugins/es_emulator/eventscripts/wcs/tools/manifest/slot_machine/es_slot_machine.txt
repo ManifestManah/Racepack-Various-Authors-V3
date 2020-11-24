@@ -1,6 +1,6 @@
 ////////////////////////////////
 //Various Authors V3 Race Pack//
-//Version 1.0.0B              //
+//Version 1.0.1B              //
 ////////////////////////////////
 
 block cash
@@ -131,7 +131,7 @@ block cash_to_speed
 	}
 	if (server_var(wcs_tmp2) >= 2500) do
 	{
-		es_playsound server_var(wcs_userid) wcs/speed.wav .8
+		es_playsound server_var(wcs_userid) wcs/speed.mp3 .8
 		es wcs_setfx cash server_var(wcs_userid) - 2500 0
 		es wcs_setfx speed server_var(wcs_userid) + server_var(wcs_speed) 0
 		es_tell server_var(wcs_userid) #multi #green [WCS]: #lightgreen Wheels - You paid 2500$ and received more speed

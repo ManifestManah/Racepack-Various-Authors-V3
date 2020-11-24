@@ -1,6 +1,6 @@
 ////////////////////////////////
 //Various Authors V3 Race Pack//
-//Version 1.0.0B              //
+//Version 1.0.1B              //
 ////////////////////////////////
 
 block spawn
@@ -134,8 +134,8 @@ block freeze
 					es wcs_setfx freeze event_var(userid) = 1 1
 					es wcs_centertell event_var(attacker) Element of surprise immobalized event_var(es_username) for 1 second!
 					es wcs_centertell event_var(userid) Element of surprise immobalized you for 1 second!
-					es_playsound event_var(attacker) skills/frostbolt.wav .7
-					es_playsound event_var(userid) skills/frostbolt.wav .9
+					es_playsound event_var(attacker) skills/frostbolt.mp3 .7
+					es_playsound event_var(userid) skills/frostbolt.mp3 .9
 					es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(userid)
 					es est_effect 11 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 3 5 200
 				}
