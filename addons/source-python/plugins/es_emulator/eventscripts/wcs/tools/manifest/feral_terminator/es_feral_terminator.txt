@@ -97,6 +97,9 @@ block evasion_armour
 			{
 				es wcsgroup set evasion event_var(userid) 1
 				es wcsgroup set evasion_chance event_var(userid) 33
+				es wcsgroup set evasion_count event_var(userid) 0
+			    es_delayed 2 wcsgroup get evasion_count wcs_tmp1 event_var(userid)
+			    es_delayed 2 es_tell event_var(userid) #multi #green [WCS]: #lightgreenHardening - You evaded server_var(wcs_tmp1) attacks
 				es_delayed 2 wcsgroup set evasion event_var(userid) 0
 				es_delayed 2 wcsgroup set evasion_chance event_var(userid) 0
 				es wcs_fade event_var(userid) 255 255 255 70 0.5 1
