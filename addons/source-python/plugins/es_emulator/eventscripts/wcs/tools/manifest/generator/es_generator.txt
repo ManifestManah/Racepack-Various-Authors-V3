@@ -212,11 +212,11 @@ block ultimate_final_roots
 	es est_effect_06 #a 0 sprites/laser.vmt server_var(vector1) server_var(vector2) 10 1 5 5 10 4 0 160 0 155 2
 	es est_effect_06 #a 0 sprites/laser.vmt server_var(vector1) server_var(vector2) 10 1 5 5 10 2 0 108 0 180 2
 	es est_effect_06 #a 0 sprites/laser.vmt server_var(vector1) server_var(vector2) 10 1 5 5 10 4 0 80 0 190 2
-	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 60 20 1 3 3 5 0 80 0 155 0 255 2
-	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 75 35 1 3 3 6 0 108 0 190 0 255 2
+	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 60 20 1 3 3 5 0 80 0 155 2
+	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 75 35 1 3 3 6 0 108 0 190 2
 	es_xmath wcs_z2 - 13
-	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 60 20 1 3 3 5 0 80 0 155 0 255 2
-	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 75 35 1 3 3 6 0 108 0 190 0 255 2
+	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 60 20 1 3 3 5 0 80 0 155 2
+	es est_effect 10 #a 0 sprites/laser.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 75 35 1 3 3 6 0 108 0 190 2
 	ifx true(wcs_race_debugging) do
 	{
 		wcs_log [Race]: Generator - [Block] Skill: 4 (EXECUTED END)

@@ -110,13 +110,19 @@ block dissolve
 	{
 		if (event_var(es_attackerdead) = 0) do
 		{
-			es_xrand wcs_tmp1 1 2
-			if (server_var(wcs_tmp1) == 1) then es wcs_removeweapon event_var(userid 1
-			if (server_var(wcs_tmp1) == 1) then es_tell event_var(userid) #multi #green [WCS]: #lightgreen Dissolver - Dissolved event_var(es_attackername)'s primary weapon
-			if (server_var(wcs_tmp1) == 1) then es_tell event_var(attacker) #multi #green [WCS]: #lightgreen Dissolver - Your primary weapon got dissolved
-			if (server_var(wcs_tmp1) == 2) then es wcs_removeweapon event_var(userid 2
-			if (server_var(wcs_tmp1) == 2) then es_tell event_var(userid) #multi #green [WCS]: #lightgreen Dissolver - Dissolved event_var(es_attackername)'s secondary weapon
-			if (server_var(wcs_tmp1) == 2) then es_tell event_var(attacker) #multi #green [WCS]: #lightgreen Dissolver - Your secondary weapon got dissolved
+			es_xrand wcs_tmp1 0 1
+			if (server_var(wcs_tmp1) == 1) do
+			{
+				 es wcs_removeweapon event_var(userid) 1
+				 es_tell event_var(userid) #multi #green [WCS]: #lightgreen Dissolver - Dissolved event_var(es_attackername)'s primary weapon
+				 es_tell event_var(attacker) #multi #green [WCS]: #lightgreen Dissolver - Your primary weapon got dissolved
+			}
+			else do
+			{
+				es wcs_removeweapon event_var(userid) 2
+				es_tell event_var(userid) #multi #green [WCS]: #lightgreen Dissolver - Dissolved event_var(es_attackername)'s secondary weapon
+				es_tell event_var(attacker) #multi #green [WCS]: #lightgreen Dissolver - Your secondary weapon got dissolved
+			}
 		}
 	}
 	ifx true(wcs_race_debugging) do
